@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvMosler = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Probabilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Impacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mitigacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNombreRiesgo = new System.Windows.Forms.Label();
             this.txtNombreRiesgo = new System.Windows.Forms.TextBox();
             this.btnAgregarRiesgo = new System.Windows.Forms.Button();
@@ -41,14 +49,6 @@
             this.listImpacto = new System.Windows.Forms.ListBox();
             this.lblProbabilidad = new System.Windows.Forms.Label();
             this.lblImpacto = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Probabilidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Impacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mitigacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nivel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMosler)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,46 @@
             this.dgvMosler.Size = new System.Drawing.Size(840, 226);
             this.dgvMosler.TabIndex = 0;
             this.dgvMosler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMosler_CellContentClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Desc
+            // 
+            this.Desc.HeaderText = "Descripcion";
+            this.Desc.Name = "Desc";
+            // 
+            // Probabilidad
+            // 
+            this.Probabilidad.HeaderText = "Probabilidad";
+            this.Probabilidad.Name = "Probabilidad";
+            // 
+            // Impacto
+            // 
+            this.Impacto.HeaderText = "Impacto";
+            this.Impacto.Name = "Impacto";
+            // 
+            // Mitigacion
+            // 
+            this.Mitigacion.HeaderText = "Mitigacion";
+            this.Mitigacion.Name = "Mitigacion";
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            // 
+            // Nivel
+            // 
+            this.Nivel.HeaderText = "Nivel";
+            this.Nivel.Name = "Nivel";
             // 
             // lblNombreRiesgo
             // 
@@ -192,46 +232,6 @@
             this.lblImpacto.Size = new System.Drawing.Size(45, 13);
             this.lblImpacto.TabIndex = 12;
             this.lblImpacto.Text = "Impacto";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Desc
-            // 
-            this.Desc.HeaderText = "Descripcion";
-            this.Desc.Name = "Desc";
-            // 
-            // Probabilidad
-            // 
-            this.Probabilidad.HeaderText = "Probabilidad";
-            this.Probabilidad.Name = "Probabilidad";
-            // 
-            // Impacto
-            // 
-            this.Impacto.HeaderText = "Impacto";
-            this.Impacto.Name = "Impacto";
-            // 
-            // Mitigacion
-            // 
-            this.Mitigacion.HeaderText = "Mitigacion";
-            this.Mitigacion.Name = "Mitigacion";
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            // 
-            // Nivel
-            // 
-            this.Nivel.HeaderText = "Nivel";
-            this.Nivel.Name = "Nivel";
             // 
             // Mosler
             // 
