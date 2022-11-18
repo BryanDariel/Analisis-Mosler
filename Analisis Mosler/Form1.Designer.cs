@@ -54,6 +54,12 @@
             // 
             // dgvMosler
             // 
+            this.dgvMosler.AllowUserToAddRows = false;
+            this.dgvMosler.AllowUserToDeleteRows = false;
+            this.dgvMosler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMosler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMosler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMosler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -66,6 +72,7 @@
             this.Nivel});
             this.dgvMosler.Location = new System.Drawing.Point(4, 199);
             this.dgvMosler.Name = "dgvMosler";
+            this.dgvMosler.ReadOnly = true;
             this.dgvMosler.Size = new System.Drawing.Size(840, 226);
             this.dgvMosler.TabIndex = 0;
             // 
@@ -73,41 +80,49 @@
             // 
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // Nombre
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // Desc
             // 
             this.Desc.HeaderText = "Descripcion";
             this.Desc.Name = "Desc";
+            this.Desc.ReadOnly = true;
             // 
             // Probabilidad
             // 
             this.Probabilidad.HeaderText = "Probabilidad";
             this.Probabilidad.Name = "Probabilidad";
+            this.Probabilidad.ReadOnly = true;
             // 
             // Impacto
             // 
             this.Impacto.HeaderText = "Impacto";
             this.Impacto.Name = "Impacto";
+            this.Impacto.ReadOnly = true;
             // 
             // Mitigacion
             // 
             this.Mitigacion.HeaderText = "Mitigacion";
             this.Mitigacion.Name = "Mitigacion";
+            this.Mitigacion.ReadOnly = true;
             // 
             // Total
             // 
             this.Total.HeaderText = "Total";
             this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // Nivel
             // 
             this.Nivel.HeaderText = "Nivel";
             this.Nivel.Name = "Nivel";
+            this.Nivel.ReadOnly = true;
             // 
             // lblNombreRiesgo
             // 

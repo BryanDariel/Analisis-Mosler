@@ -16,7 +16,7 @@ namespace Analisis_Mosler
 
         private int n = 0; //Este es el numero de renglones
         int nProbabilidad = 0, nImpacto = 0; //Estos son los datos que tomaremos una formula para sacar el total del riesgo
-        int Prueba = 0;
+        int Calculo = 0;
         string vl; //Este es el texto que debe caer dentro de Nivel
         int id = 0;
 
@@ -50,34 +50,34 @@ namespace Analisis_Mosler
             //El valor minimo es 1 y el maximo es 25, asi que vamos a tomar 5 numeros para cada Nivel de riesgo
             //A cada nivel de dificultad le asignaremos un color para identificar qué tan grave es sin leer el texto
 
-            Prueba = nProbabilidad * nImpacto;
+            Calculo = nProbabilidad * nImpacto;
 
-            if (Prueba >= 1 && Prueba <= 5)
+            if (Calculo >= 1 && Calculo <= 5)
             {
                 vl = "1-Riesgo muy bajo";
                 dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.GreenYellow;
                 dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
             }
-            if (Prueba >= 6 && Prueba <= 10)
+            if (Calculo >= 6 && Calculo <= 10)
             {
                 vl = "2-Riesgo bajo";
                 dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.Green;
                 dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
             }
-            if (Prueba >= 11 && Prueba <= 15)
+            if (Calculo >= 11 && Calculo <= 15)
             {
                 vl = "3-Riesgo normal";
                 dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.Orange;
                 dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
             }
-            if (Prueba >= 16 && Prueba <= 20)
+            if (Calculo >= 16 && Calculo <= 20)
             {
                 vl = "4-Riesgo alto";
                 dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.OrangeRed;
                 dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
 
             }
-            if (Prueba >= 21 && Prueba <= 25)
+            if (Calculo >= 21 && Calculo <= 25)
             {
                 vl = "5-Riesgo muy alto";
                 dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.Red;
@@ -91,7 +91,7 @@ namespace Analisis_Mosler
             dgvMosler.Rows[n].Cells[3].Value = listProbabilidad.Text;
             dgvMosler.Rows[n].Cells[4].Value = listImpacto.Text;
             dgvMosler.Rows[n].Cells[5].Value = txtMitigación.Text;
-            dgvMosler.Rows[n].Cells[6].Value = Prueba;
+            dgvMosler.Rows[n].Cells[6].Value = Calculo;
             dgvMosler.Rows[n].Cells[7].Value = vl;
 
             //Limpiar los txt
