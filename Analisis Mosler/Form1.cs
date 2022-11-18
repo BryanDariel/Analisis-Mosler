@@ -25,14 +25,6 @@ namespace Analisis_Mosler
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e){
-
-        }
-
-        private void txtNombreRiesgo_TextChanged(object sender, EventArgs e){
-
-        }
-
         private void btnAgregarRiesgo_Click(object sender, EventArgs e){
 
             //Funcion de añadir nuevo renglon
@@ -114,35 +106,6 @@ namespace Analisis_Mosler
 
                 dgvMosler.Rows.RemoveAt(n);
             }
-        }
-
-
-
-        //Clicks sin querer
-        private void dgvMosler_CellContentClick(object sender, DataGridViewCellEventArgs e){
-
-        }
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e){
-
-        }
-        private void lblDescripcion_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void txtDescripcion_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void listBox2_SelectedIndexChanged(object sender, EventArgs e){
-
-        }
-        private void lblMitigación_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

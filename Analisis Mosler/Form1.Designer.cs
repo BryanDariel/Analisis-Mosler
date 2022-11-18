@@ -68,7 +68,6 @@
             this.dgvMosler.Name = "dgvMosler";
             this.dgvMosler.Size = new System.Drawing.Size(840, 226);
             this.dgvMosler.TabIndex = 0;
-            this.dgvMosler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMosler_CellContentClick);
             // 
             // ID
             // 
@@ -118,7 +117,6 @@
             this.lblNombreRiesgo.Size = new System.Drawing.Size(97, 13);
             this.lblNombreRiesgo.TabIndex = 1;
             this.lblNombreRiesgo.Text = "Nombre del Riesgo";
-            this.lblNombreRiesgo.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNombreRiesgo
             // 
@@ -126,7 +124,6 @@
             this.txtNombreRiesgo.Name = "txtNombreRiesgo";
             this.txtNombreRiesgo.Size = new System.Drawing.Size(167, 20);
             this.txtNombreRiesgo.TabIndex = 2;
-            this.txtNombreRiesgo.TextChanged += new System.EventHandler(this.txtNombreRiesgo_TextChanged);
             // 
             // btnAgregarRiesgo
             // 
@@ -155,7 +152,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(155, 38);
             this.txtDescripcion.TabIndex = 6;
-            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtDescripcion_TextChanged);
             // 
             // lblDescripcion
             // 
@@ -165,7 +161,6 @@
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 5;
             this.lblDescripcion.Text = "Descripción";
-            this.lblDescripcion.Click += new System.EventHandler(this.lblDescripcion_Click);
             // 
             // txtMitigación
             // 
@@ -183,7 +178,6 @@
             this.lblMitigación.Size = new System.Drawing.Size(55, 13);
             this.lblMitigación.TabIndex = 7;
             this.lblMitigación.Text = "Mitigación";
-            this.lblMitigación.Click += new System.EventHandler(this.lblMitigación_Click);
             // 
             // listProbabilidad
             // 
@@ -198,7 +192,6 @@
             this.listProbabilidad.Name = "listProbabilidad";
             this.listProbabilidad.Size = new System.Drawing.Size(120, 69);
             this.listProbabilidad.TabIndex = 9;
-            this.listProbabilidad.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // listImpacto
             // 
@@ -213,7 +206,6 @@
             this.listImpacto.Name = "listImpacto";
             this.listImpacto.Size = new System.Drawing.Size(120, 69);
             this.listImpacto.TabIndex = 10;
-            this.listImpacto.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // lblProbabilidad
             // 
@@ -253,7 +245,6 @@
             this.Controls.Add(this.dgvMosler);
             this.Name = "Mosler";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMosler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
