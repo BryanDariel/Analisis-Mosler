@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mosler));
             this.dgvMosler = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,15 +50,17 @@
             this.listImpacto = new System.Windows.Forms.ListBox();
             this.lblProbabilidad = new System.Windows.Forms.Label();
             this.lblImpacto = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMosler)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMosler
             // 
             this.dgvMosler.AllowUserToAddRows = false;
             this.dgvMosler.AllowUserToDeleteRows = false;
-            this.dgvMosler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvMosler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMosler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMosler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -70,10 +73,10 @@
             this.Mitigacion,
             this.Total,
             this.Nivel});
-            this.dgvMosler.Location = new System.Drawing.Point(4, 199);
+            this.dgvMosler.Location = new System.Drawing.Point(4, 229);
             this.dgvMosler.Name = "dgvMosler";
             this.dgvMosler.ReadOnly = true;
-            this.dgvMosler.Size = new System.Drawing.Size(840, 226);
+            this.dgvMosler.Size = new System.Drawing.Size(557, 194);
             this.dgvMosler.TabIndex = 0;
             // 
             // ID
@@ -126,8 +129,10 @@
             // 
             // lblNombreRiesgo
             // 
+            this.lblNombreRiesgo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreRiesgo.AutoSize = true;
-            this.lblNombreRiesgo.Location = new System.Drawing.Point(12, 18);
+            this.lblNombreRiesgo.Location = new System.Drawing.Point(12, 38);
             this.lblNombreRiesgo.Name = "lblNombreRiesgo";
             this.lblNombreRiesgo.Size = new System.Drawing.Size(97, 13);
             this.lblNombreRiesgo.TabIndex = 1;
@@ -135,14 +140,15 @@
             // 
             // txtNombreRiesgo
             // 
-            this.txtNombreRiesgo.Location = new System.Drawing.Point(15, 34);
+            this.txtNombreRiesgo.Location = new System.Drawing.Point(15, 54);
             this.txtNombreRiesgo.Name = "txtNombreRiesgo";
             this.txtNombreRiesgo.Size = new System.Drawing.Size(167, 20);
             this.txtNombreRiesgo.TabIndex = 2;
             // 
             // btnAgregarRiesgo
             // 
-            this.btnAgregarRiesgo.Location = new System.Drawing.Point(597, 18);
+            this.btnAgregarRiesgo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAgregarRiesgo.Location = new System.Drawing.Point(438, 132);
             this.btnAgregarRiesgo.Name = "btnAgregarRiesgo";
             this.btnAgregarRiesgo.Size = new System.Drawing.Size(93, 38);
             this.btnAgregarRiesgo.TabIndex = 3;
@@ -152,7 +158,8 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(597, 64);
+            this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBorrar.Location = new System.Drawing.Point(438, 178);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(93, 38);
             this.btnBorrar.TabIndex = 4;
@@ -162,7 +169,9 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(217, 34);
+            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescripcion.Location = new System.Drawing.Point(216, 54);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(155, 38);
@@ -170,8 +179,9 @@
             // 
             // lblDescripcion
             // 
+            this.lblDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(214, 18);
+            this.lblDescripcion.Location = new System.Drawing.Point(213, 38);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
             this.lblDescripcion.TabIndex = 5;
@@ -179,7 +189,8 @@
             // 
             // txtMitigación
             // 
-            this.txtMitigación.Location = new System.Drawing.Point(407, 34);
+            this.txtMitigación.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMitigación.Location = new System.Drawing.Point(406, 54);
             this.txtMitigación.Multiline = true;
             this.txtMitigación.Name = "txtMitigación";
             this.txtMitigación.Size = new System.Drawing.Size(155, 38);
@@ -187,8 +198,9 @@
             // 
             // lblMitigación
             // 
+            this.lblMitigación.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMitigación.AutoSize = true;
-            this.lblMitigación.Location = new System.Drawing.Point(404, 18);
+            this.lblMitigación.Location = new System.Drawing.Point(403, 38);
             this.lblMitigación.Name = "lblMitigación";
             this.lblMitigación.Size = new System.Drawing.Size(55, 13);
             this.lblMitigación.TabIndex = 7;
@@ -196,6 +208,7 @@
             // 
             // listProbabilidad
             // 
+            this.listProbabilidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listProbabilidad.FormattingEnabled = true;
             this.listProbabilidad.Items.AddRange(new object[] {
             "1",
@@ -203,13 +216,14 @@
             "3",
             "4",
             "5"});
-            this.listProbabilidad.Location = new System.Drawing.Point(15, 105);
+            this.listProbabilidad.Location = new System.Drawing.Point(15, 148);
             this.listProbabilidad.Name = "listProbabilidad";
             this.listProbabilidad.Size = new System.Drawing.Size(120, 69);
             this.listProbabilidad.TabIndex = 9;
             // 
             // listImpacto
             // 
+            this.listImpacto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listImpacto.FormattingEnabled = true;
             this.listImpacto.Items.AddRange(new object[] {
             "1",
@@ -217,7 +231,7 @@
             "3",
             "4",
             "5"});
-            this.listImpacto.Location = new System.Drawing.Point(217, 105);
+            this.listImpacto.Location = new System.Drawing.Point(217, 148);
             this.listImpacto.Name = "listImpacto";
             this.listImpacto.Size = new System.Drawing.Size(120, 69);
             this.listImpacto.TabIndex = 10;
@@ -225,7 +239,7 @@
             // lblProbabilidad
             // 
             this.lblProbabilidad.AutoSize = true;
-            this.lblProbabilidad.Location = new System.Drawing.Point(12, 89);
+            this.lblProbabilidad.Location = new System.Drawing.Point(12, 132);
             this.lblProbabilidad.Name = "lblProbabilidad";
             this.lblProbabilidad.Size = new System.Drawing.Size(65, 13);
             this.lblProbabilidad.TabIndex = 11;
@@ -234,17 +248,37 @@
             // lblImpacto
             // 
             this.lblImpacto.AutoSize = true;
-            this.lblImpacto.Location = new System.Drawing.Point(214, 89);
+            this.lblImpacto.Location = new System.Drawing.Point(214, 132);
             this.lblImpacto.Name = "lblImpacto";
             this.lblImpacto.Size = new System.Drawing.Size(45, 13);
             this.lblImpacto.TabIndex = 12;
             this.lblImpacto.Text = "Impacto";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(703, 25);
+            this.toolStrip1.TabIndex = 13;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            // 
             // Mosler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 436);
+            this.ClientSize = new System.Drawing.Size(703, 435);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblImpacto);
             this.Controls.Add(this.lblProbabilidad);
             this.Controls.Add(this.listImpacto);
@@ -260,7 +294,10 @@
             this.Controls.Add(this.dgvMosler);
             this.Name = "Mosler";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Mosler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMosler)).EndInit();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,6 +326,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Mitigacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nivel;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 

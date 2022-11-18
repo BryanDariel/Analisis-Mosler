@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,55 +9,63 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Analisis_Mosler
-{
+namespace Analisis_Mosler{
     public partial class Mosler : Form {
 
-        //Variables
-
-        private int n = 0; //Este es el numero de renglones
-        int nProbabilidad = 0, nImpacto = 0; //Estos son los datos que tomaremos una formula para sacar el total del riesgo
-        int Calculo = 0;
-        string vl; //Este es el texto que debe caer dentro de Nivel
-        int id = 0;
+        ArrayList Riesgo = new ArrayList();
 
         public Mosler(){
 
             InitializeComponent();
         }
 
+        private void Mosler_Load(object sender, EventArgs e)
+        {
+            Riesgo Riesgo1 = new Riesgo();
+        }
+
+        //Variables
+
+        private int n = 0; //Este es el numero de filas
+        int nProbabilidad = 0, nImpacto = 0; //Estos son los datos que tomaremos para calcular el total del riesgo
+        int Calculo = 0;
+        string vl; //Este es el texto que debe caer dentro de Nivel
+        int id = 0; //El ID
+
         private void btnAgregarRiesgo_Click(object sender, EventArgs e){
 
-            //Funcion de añadir nuevo renglon
+            //Funcion de añadir nueva fila
 
             int n = dgvMosler.Rows.Add();
 
-            //ID del riesgo
+            //ID del riesgo que vaya aumentando segun el numero de filas y se coloque en la primera celda
 
             for(id = 0; id <= n; id++)
             {
                 dgvMosler.Rows[n].Cells[0].Value = id + 1;
             }
 
-            //Para el total, debemos convertir los valores de las ListBox a numeros para luego hacer las operaciones
+            //Convertimos los valores de las ListBox a numeros para luego hacer las operaciones
+            //Traté de hacerlo con texto, pero no me funcoina al hacerlo
+
             //Probabilidad
             nProbabilidad = Convert.ToInt16(listProbabilidad.Text);
 
             //Impacto
             nImpacto = Convert.ToInt16(listImpacto.Text);
 
-            //Prueba
-            //Con los pocos numeros numeros que tenemos ahora, vamos a tomar una multiplicación de ejemplo y los colocaremos en "Total"
-            //El valor minimo es 1 y el maximo es 25, asi que vamos a tomar 5 numeros para cada Nivel de riesgo
-            //A cada nivel de dificultad le asignaremos un color para identificar qué tan grave es sin leer el texto
+            //Con las pocas variables que tenemos ahora, vamos a hacer una multiplicacion y colocamos los resultado en "Total"
 
             Calculo = nProbabilidad * nImpacto;
+
+            //El valor minimo es 1 y el maximo es 25, asi que vamos a tomar 5 numeros para cada Nivel de riesgo
+            //A cada nivel de dificultad le asignaremos un color para identificar qué tan grave es sin leer el texto
 
             if (Calculo >= 1 && Calculo <= 5)
             {
                 vl = "1-Riesgo muy bajo";
-                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.GreenYellow;
-                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
+                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.GreenYellow; //BackColor es el color de fondo, el color de adentro de la celda
+                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White; //ForeColor es el color de las letras
             }
             if (Calculo >= 6 && Calculo <= 10)
             {
@@ -86,6 +95,7 @@ namespace Analisis_Mosler
 
             //Colocamos la informacion
 
+            //Recuerden que la celda 0 esta arriba, utilizandose para la ID, como ya tenemos esa, empezamos en la celda 1
             dgvMosler.Rows[n].Cells[1].Value = txtNombreRiesgo.Text;
             dgvMosler.Rows[n].Cells[2].Value = txtDescripcion.Text;
             dgvMosler.Rows[n].Cells[3].Value = listProbabilidad.Text;
@@ -94,7 +104,7 @@ namespace Analisis_Mosler
             dgvMosler.Rows[n].Cells[6].Value = Calculo;
             dgvMosler.Rows[n].Cells[7].Value = vl;
 
-            //Limpiar los txt
+            //Limpiar los txt al haber colocado los datos
             txtNombreRiesgo.Clear();
             txtDescripcion.Clear();
             txtMitigación.Clear();
