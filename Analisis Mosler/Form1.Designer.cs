@@ -76,7 +76,7 @@
             this.dgvMosler.Location = new System.Drawing.Point(4, 229);
             this.dgvMosler.Name = "dgvMosler";
             this.dgvMosler.ReadOnly = true;
-            this.dgvMosler.Size = new System.Drawing.Size(557, 194);
+            this.dgvMosler.Size = new System.Drawing.Size(687, 194);
             this.dgvMosler.TabIndex = 0;
             // 
             // ID
@@ -148,7 +148,7 @@
             // btnAgregarRiesgo
             // 
             this.btnAgregarRiesgo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAgregarRiesgo.Location = new System.Drawing.Point(438, 132);
+            this.btnAgregarRiesgo.Location = new System.Drawing.Point(406, 132);
             this.btnAgregarRiesgo.Name = "btnAgregarRiesgo";
             this.btnAgregarRiesgo.Size = new System.Drawing.Size(93, 38);
             this.btnAgregarRiesgo.TabIndex = 3;
@@ -159,7 +159,7 @@
             // btnBorrar
             // 
             this.btnBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBorrar.Location = new System.Drawing.Point(438, 178);
+            this.btnBorrar.Location = new System.Drawing.Point(406, 178);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(93, 38);
             this.btnBorrar.TabIndex = 4;
