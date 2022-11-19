@@ -73,7 +73,7 @@
             this.dgvMosler.Location = new System.Drawing.Point(4, 199);
             this.dgvMosler.Name = "dgvMosler";
             this.dgvMosler.ReadOnly = true;
-            this.dgvMosler.Size = new System.Drawing.Size(840, 226);
+            this.dgvMosler.Size = new System.Drawing.Size(681, 140);
             this.dgvMosler.TabIndex = 0;
             // 
             // ID
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 436);
+            this.ClientSize = new System.Drawing.Size(697, 350);
             this.Controls.Add(this.lblImpacto);
             this.Controls.Add(this.lblProbabilidad);
             this.Controls.Add(this.listImpacto);
@@ -260,6 +260,7 @@
             this.Controls.Add(this.dgvMosler);
             this.Name = "Mosler";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Mosler_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMosler)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

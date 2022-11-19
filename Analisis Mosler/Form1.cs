@@ -14,8 +14,9 @@ namespace Analisis_Mosler
 
         //Variables
 
-        private int n = 0; //Este es el numero de renglones
-        int nProbabilidad = 0, nImpacto = 0; //Estos son los datos que tomaremos una formula para sacar el total del riesgo
+        private int n = 0; //Este es el numero de filas
+        int nProbabilidad = 0; //Estos son los datos que tomaremos una formula para sacar el total del riesgo
+        int nImpacto = 0; 
         int Calculo = 0;
         string vl; //Este es el texto que debe caer dentro de Nivel
         int id = 0;
@@ -27,7 +28,7 @@ namespace Analisis_Mosler
 
         private void btnAgregarRiesgo_Click(object sender, EventArgs e){
 
-            //Funcion de añadir nuevo renglon
+            //Funcion de añadir nueva fila
 
             int n = dgvMosler.Rows.Add();
 
@@ -39,14 +40,14 @@ namespace Analisis_Mosler
             }
 
             //Para el total, debemos convertir los valores de las ListBox a numeros para luego hacer las operaciones
+
             //Probabilidad
             nProbabilidad = Convert.ToInt16(listProbabilidad.Text);
 
             //Impacto
             nImpacto = Convert.ToInt16(listImpacto.Text);
 
-            //Prueba
-            //Con los pocos numeros numeros que tenemos ahora, vamos a tomar una multiplicación de ejemplo y los colocaremos en "Total"
+            //Con las variables que tenemos ahora, vamos a tomar una multiplicación y lo colocamos en "Total"
             //El valor minimo es 1 y el maximo es 25, asi que vamos a tomar 5 numeros para cada Nivel de riesgo
             //A cada nivel de dificultad le asignaremos un color para identificar qué tan grave es sin leer el texto
 
@@ -55,8 +56,8 @@ namespace Analisis_Mosler
             if (Calculo >= 1 && Calculo <= 5)
             {
                 vl = "1-Riesgo muy bajo";
-                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.GreenYellow;
-                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
+                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.GreenYellow; //BackColor es para el color de fondo de la celda
+                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White; //ForeColor es para el color de las letras
             }
             if (Calculo >= 6 && Calculo <= 10)
             {
@@ -98,6 +99,11 @@ namespace Analisis_Mosler
             txtNombreRiesgo.Clear();
             txtDescripcion.Clear();
             txtMitigación.Clear();
+        }
+
+        private void Mosler_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
