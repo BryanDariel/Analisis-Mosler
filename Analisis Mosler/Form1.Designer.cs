@@ -139,7 +139,6 @@
             this.lblMitigación.Size = new System.Drawing.Size(55, 13);
             this.lblMitigación.TabIndex = 7;
             this.lblMitigación.Text = "Mitigación";
-            this.lblMitigación.Click += new System.EventHandler(this.lblMitigación_Click);
             // 
             // listProbabilidad
             // 
