@@ -87,7 +87,7 @@
             // 
             // btnAgregarRiesgo
             // 
-            this.btnAgregarRiesgo.Location = new System.Drawing.Point(392, 132);
+            this.btnAgregarRiesgo.Location = new System.Drawing.Point(409, 132);
             this.btnAgregarRiesgo.Name = "btnAgregarRiesgo";
             this.btnAgregarRiesgo.Size = new System.Drawing.Size(93, 38);
             this.btnAgregarRiesgo.TabIndex = 3;
@@ -97,7 +97,7 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(392, 179);
+            this.btnBorrar.Location = new System.Drawing.Point(409, 176);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(93, 38);
             this.btnBorrar.TabIndex = 4;
