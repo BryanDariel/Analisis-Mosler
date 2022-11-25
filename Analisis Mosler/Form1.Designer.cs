@@ -45,8 +45,8 @@
             this.lblImpacto = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbGuardarArchivo = new System.Windows.Forms.ToolStripButton();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tsbCargarArchivo = new System.Windows.Forms.ToolStripButton();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMosler)).BeginInit();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -87,7 +87,7 @@
             // 
             // btnAgregarRiesgo
             // 
-            this.btnAgregarRiesgo.Location = new System.Drawing.Point(406, 132);
+            this.btnAgregarRiesgo.Location = new System.Drawing.Point(392, 132);
             this.btnAgregarRiesgo.Name = "btnAgregarRiesgo";
             this.btnAgregarRiesgo.Size = new System.Drawing.Size(93, 38);
             this.btnAgregarRiesgo.TabIndex = 3;
@@ -97,13 +97,12 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(406, 179);
+            this.btnBorrar.Location = new System.Drawing.Point(392, 179);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(93, 38);
             this.btnBorrar.TabIndex = 4;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
-            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // txtDescripcion
             // 
@@ -207,10 +206,6 @@
             this.tsbGuardarArchivo.Size = new System.Drawing.Size(23, 22);
             this.tsbGuardarArchivo.Text = "toolStripButton1";
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // tsbCargarArchivo
             // 
             this.tsbCargarArchivo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -219,6 +214,10 @@
             this.tsbCargarArchivo.Name = "tsbCargarArchivo";
             this.tsbCargarArchivo.Size = new System.Drawing.Size(23, 22);
             this.tsbCargarArchivo.Text = "toolStripButton2";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Mosler
             // 

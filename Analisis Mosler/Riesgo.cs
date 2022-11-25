@@ -11,8 +11,8 @@ namespace Analisis_Mosler
         public int ID { get; set; }
         public string NombreRiesgo { get; set; }
         public string DescripcionRiesgo { get; set; }
-        public int Probabilidad { get; set; }
-        public int Impacto { get; set; }
+        public string Probabilidad { get; set; }
+        public string Impacto { get; set; }
         public string Mitigacion { get; set; }
         public int Total { get; set; }
         public string Nivel { get; set; }
