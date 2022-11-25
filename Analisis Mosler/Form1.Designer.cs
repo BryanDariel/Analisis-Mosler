@@ -60,7 +60,8 @@
             // 
             this.dgvMosler.AllowUserToAddRows = false;
             this.dgvMosler.AllowUserToDeleteRows = false;
-            this.dgvMosler.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvMosler.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMosler.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMosler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -169,8 +170,6 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripcion.Location = new System.Drawing.Point(216, 54);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
@@ -179,7 +178,8 @@
             // 
             // lblDescripcion
             // 
-            this.lblDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Location = new System.Drawing.Point(213, 38);
             this.lblDescripcion.Name = "lblDescripcion";
@@ -189,7 +189,8 @@
             // 
             // txtMitigación
             // 
-            this.txtMitigación.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtMitigación.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMitigación.Location = new System.Drawing.Point(406, 54);
             this.txtMitigación.Multiline = true;
             this.txtMitigación.Name = "txtMitigación";
@@ -198,7 +199,6 @@
             // 
             // lblMitigación
             // 
-            this.lblMitigación.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMitigación.AutoSize = true;
             this.lblMitigación.Location = new System.Drawing.Point(403, 38);
             this.lblMitigación.Name = "lblMitigación";
@@ -208,7 +208,6 @@
             // 
             // listProbabilidad
             // 
-            this.listProbabilidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listProbabilidad.FormattingEnabled = true;
             this.listProbabilidad.Items.AddRange(new object[] {
             "1",
@@ -223,7 +222,6 @@
             // 
             // listImpacto
             // 
-            this.listImpacto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listImpacto.FormattingEnabled = true;
             this.listImpacto.Items.AddRange(new object[] {
             "1",
