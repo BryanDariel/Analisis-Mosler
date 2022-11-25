@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Analisis_Mosler{
+
     public partial class Mosler : Form {
 
         ArrayList Riesgo = new ArrayList();
@@ -22,92 +23,90 @@ namespace Analisis_Mosler{
         private void Mosler_Load(object sender, EventArgs e)
         {
             Riesgo Riesgo1 = new Riesgo();
+            Riesgo1.ID = 5;
+            Riesgo1.NombreRiesgo = "Sismo";
+            Riesgo1.DescripcionRiesgo = "Perdida Informacion";
+            Riesgo1.Mitigacion = "Lugar seguro";
+            Riesgo1.Probabilidad = 2;
+            Riesgo1.Impacto = 5;
+            Riesgo1.Total = 10;
+            Riesgo1.Nivel = "2-Riesgo bajo";
+            Riesgo.Add(Riesgo1);
+
+            Riesgo Riesgo2 = new Riesgo();
+            Riesgo2.ID = 3;
+            Riesgo2.NombreRiesgo = "Torbellino";
+            Riesgo2.DescripcionRiesgo = "Perdida Informacion";
+            Riesgo2.Mitigacion = "Lugar seguro";
+            Riesgo2.Probabilidad = 2;
+            Riesgo2.Impacto = 5;
+            Riesgo2.Total = 10;
+            Riesgo2.Nivel = "2-Riesgo bajo";
+            Riesgo.Add(Riesgo2);
+
+            dgvMosler.DataSource = Riesgo;
         }
-
-        //Variables
-
-        private int n = 0; //Este es el numero de filas
-        int nProbabilidad = 0, nImpacto = 0; //Estos son los datos que tomaremos para calcular el total del riesgo
-        int Calculo = 0;
-        string vl; //Este es el texto que debe caer dentro de Nivel
-        int id = 0; //El ID
 
         private void btnAgregarRiesgo_Click(object sender, EventArgs e){
 
-            //Funcion de añadir nueva fila
-
-            int n = dgvMosler.Rows.Add();
-
-            //ID del riesgo que vaya aumentando segun el numero de filas y se coloque en la primera celda
-
-            for(id = 0; id <= n; id++)
+            
+            if (txtNombreRiesgo.Text == "")
             {
-                dgvMosler.Rows[n].Cells[0].Value = id + 1;
+                errorProvider1.SetError(txtNombreRiesgo, "Debe ingresar el nombre del riesgo.");
+                txtNombreRiesgo.Focus();
+                return;
+            }
+            errorProvider1.SetError(txtNombreRiesgo, "");
+
+            if (Existe(txtNombreRiesgo.Text))
+            {
+                errorProvider1.SetError(txtNombreRiesgo, "El nombre del riesgo ya ha sido registrado.");
+                txtNombreRiesgo.Focus();
+                return;
             }
 
-            //Convertimos los valores de las ListBox a numeros para luego hacer las operaciones
-            //Traté de hacerlo con texto, pero no me funcoina al hacerlo
-
-            //Probabilidad
-            nProbabilidad = Convert.ToInt16(listProbabilidad.Text);
-
-            //Impacto
-            nImpacto = Convert.ToInt16(listImpacto.Text);
-
-            //Con las pocas variables que tenemos ahora, vamos a hacer una multiplicacion y colocamos los resultado en "Total"
-
-            Calculo = nProbabilidad * nImpacto;
-
-            //El valor minimo es 1 y el maximo es 25, asi que vamos a tomar 5 numeros para cada Nivel de riesgo
-            //A cada nivel de dificultad le asignaremos un color para identificar qué tan grave es sin leer el texto
-
-            if (Calculo >= 1 && Calculo <= 5)
+            if (txtDescripcion.Text == "")
             {
-                vl = "1-Riesgo muy bajo";
-                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.GreenYellow; //BackColor es el color de fondo, el color de adentro de la celda
-                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White; //ForeColor es el color de las letras
+                errorProvider1.SetError(txtDescripcion, "Debe ingresar una descripción del riesgo.");
+                txtDescripcion.Focus();
+                return;
             }
-            if (Calculo >= 6 && Calculo <= 10)
-            {
-                vl = "2-Riesgo bajo";
-                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.Green;
-                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
-            }
-            if (Calculo >= 11 && Calculo <= 15)
-            {
-                vl = "3-Riesgo normal";
-                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.Orange;
-                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
-            }
-            if (Calculo >= 16 && Calculo <= 20)
-            {
-                vl = "4-Riesgo alto";
-                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.OrangeRed;
-                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
+            errorProvider1.SetError(txtDescripcion, "");
 
-            }
-            if (Calculo >= 21 && Calculo <= 25)
+            if (txtMitigación.Text == "")
             {
-                vl = "5-Riesgo muy alto";
-                dgvMosler.Rows[n].Cells[7].Style.BackColor = Color.Red;
-                dgvMosler.Rows[n].Cells[7].Style.ForeColor = Color.White;
+                errorProvider1.SetError(txtMitigación, "Debe ingresar una mitigación del riesgo.");
+                txtMitigación.Focus();
+                return;
             }
+            errorProvider1.SetError(txtMitigación, "");
 
-            //Colocamos la informacion
+            Riesgo miRiesgo = new Riesgo();
+            miRiesgo.NombreRiesgo = txtNombreRiesgo.Text;
+            miRiesgo.DescripcionRiesgo = txtDescripcion.Text;
+            miRiesgo.Mitigacion = txtMitigación.Text;
+            miRiesgo.Probabilidad = lblProbabilidad.TabIndex;
+            //miRiesgo.Impacto =
+            //miRiesgo.Total = 
+            //miRiesgo.Nivel = 
+            Riesgo.Add(miRiesgo);
 
-            //Recuerden que la celda 0 esta arriba, utilizandose para la ID, como ya tenemos esa, empezamos en la celda 1
-            dgvMosler.Rows[n].Cells[1].Value = txtNombreRiesgo.Text;
-            dgvMosler.Rows[n].Cells[2].Value = txtDescripcion.Text;
-            dgvMosler.Rows[n].Cells[3].Value = listProbabilidad.Text;
-            dgvMosler.Rows[n].Cells[4].Value = listImpacto.Text;
-            dgvMosler.Rows[n].Cells[5].Value = txtMitigación.Text;
-            dgvMosler.Rows[n].Cells[6].Value = Calculo;
-            dgvMosler.Rows[n].Cells[7].Value = vl;
+            dgvMosler.DataSource = null;
+            dgvMosler.DataSource = miRiesgo;
 
             //Limpiar los txt al haber colocado los datos
             txtNombreRiesgo.Clear();
             txtDescripcion.Clear();
             txtMitigación.Clear();
+        }
+
+        private bool Existe(string txtNombreRiesgo)
+        {
+            foreach (Riesgo Riesgo in Riesgo)
+            {
+                if(Riesgo.NombreRiesgo == txtNombreRiesgo) return true;
+            }
+            return false;
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
