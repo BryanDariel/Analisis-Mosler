@@ -125,7 +125,7 @@
             // 
             // txtMitigación
             // 
-            this.txtMitigación.Location = new System.Drawing.Point(392, 54);
+            this.txtMitigación.Location = new System.Drawing.Point(409, 54);
             this.txtMitigación.Multiline = true;
             this.txtMitigación.Name = "txtMitigación";
             this.txtMitigación.Size = new System.Drawing.Size(178, 38);
@@ -134,11 +134,12 @@
             // lblMitigación
             // 
             this.lblMitigación.AutoSize = true;
-            this.lblMitigación.Location = new System.Drawing.Point(403, 38);
+            this.lblMitigación.Location = new System.Drawing.Point(406, 38);
             this.lblMitigación.Name = "lblMitigación";
             this.lblMitigación.Size = new System.Drawing.Size(55, 13);
             this.lblMitigación.TabIndex = 7;
             this.lblMitigación.Text = "Mitigación";
+            this.lblMitigación.Click += new System.EventHandler(this.lblMitigación_Click);
             // 
             // listProbabilidad
             // 

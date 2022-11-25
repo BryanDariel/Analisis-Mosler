@@ -156,6 +156,11 @@ namespace Analisis_Mosler{
             return false;
         }
 
+        private void lblMitigación_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void Mosler_Load(object sender, EventArgs e)
         {
             Riesgo Riesgo1 = new Riesgo();
