@@ -9,8 +9,8 @@ namespace Analisis_Mosler
     internal class Riesgo
     {
         public int ID { get; set; }
-        public string NombreRiesgo { get; set; }
-        public string DescripcionRiesgo { get; set; }
+        public string Nombre{ get; set; }
+        public string Descripcion { get; set; }
         public string Probabilidad { get; set; }
         public string Impacto { get; set; }
         public string Mitigacion { get; set; }

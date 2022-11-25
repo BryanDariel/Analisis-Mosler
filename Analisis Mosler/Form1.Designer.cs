@@ -64,7 +64,7 @@
             this.dgvMosler.Location = new System.Drawing.Point(4, 229);
             this.dgvMosler.Name = "dgvMosler";
             this.dgvMosler.ReadOnly = true;
-            this.dgvMosler.Size = new System.Drawing.Size(600, 194);
+            this.dgvMosler.Size = new System.Drawing.Size(824, 194);
             this.dgvMosler.TabIndex = 0;
             // 
             // lblNombreRiesgo
@@ -193,7 +193,7 @@
             this.tsbCargarArchivo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(616, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(840, 25);
             this.toolStrip1.TabIndex = 13;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -223,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 435);
+            this.ClientSize = new System.Drawing.Size(840, 435);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblImpacto);
             this.Controls.Add(this.lblProbabilidad);

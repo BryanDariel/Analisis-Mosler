@@ -28,8 +28,8 @@ namespace Analisis_Mosler{
         {
             Riesgo Riesgo1 = new Riesgo();
             Riesgo1.ID = 5;
-            Riesgo1.NombreRiesgo = "Sismo";
-            Riesgo1.DescripcionRiesgo = "Perdida Informacion";
+            Riesgo1.Nombre = "Sismo";
+            Riesgo1.Descripcion = "Perdida Informacion";
             Riesgo1.Mitigacion = "Lugar seguro";
             Riesgo1.Probabilidad = listProbabilidad.Text;
             Riesgo1.Impacto = listImpacto.Text;
@@ -39,8 +39,8 @@ namespace Analisis_Mosler{
 
             Riesgo Riesgo2 = new Riesgo();
             Riesgo2.ID = 3;
-            Riesgo2.NombreRiesgo = "Torbellino";
-            Riesgo2.DescripcionRiesgo = "Perdida Informacion";
+            Riesgo2.Nombre = "Torbellino";
+            Riesgo2.Descripcion = "Perdida Informacion";
             Riesgo2.Mitigacion = "Lugar seguro";
             Riesgo2.Probabilidad = listProbabilidad.Text;
             Riesgo2.Impacto = listImpacto.Text;
@@ -129,8 +129,8 @@ namespace Analisis_Mosler{
 
             //Ayudame, papa Dio'
             Riesgo miRiesgo = new Riesgo();
-            miRiesgo.NombreRiesgo = txtNombreRiesgo.Text;
-            miRiesgo.DescripcionRiesgo = txtDescripcion.Text;
+            miRiesgo.Nombre = txtNombreRiesgo.Text;
+            miRiesgo.Descripcion = txtDescripcion.Text;
             miRiesgo.Mitigacion = txtMitigación.Text;
             miRiesgo.Probabilidad = listProbabilidad.Text;
             miRiesgo.Impacto = listImpacto.Text;
@@ -151,7 +151,7 @@ namespace Analisis_Mosler{
         {
             foreach (Riesgo Riesgo in Riesgo)
             {
-                if (Riesgo.NombreRiesgo == txtNombreRiesgo) return true;
+                if (Riesgo.Nombre == txtNombreRiesgo) return true;
             }
             return false;
         }
@@ -160,8 +160,8 @@ namespace Analisis_Mosler{
         {
             Riesgo Riesgo1 = new Riesgo();
             Riesgo1.ID = 5;
-            Riesgo1.NombreRiesgo = "Sismo";
-            Riesgo1.DescripcionRiesgo = "Perdida Informacion";
+            Riesgo1.Nombre = "Sismo";
+            Riesgo1.Descripcion = "Perdida Informacion";
             Riesgo1.Mitigacion = "Lugar seguro";
             Riesgo1.Probabilidad = listProbabilidad.Text;
             Riesgo1.Impacto = listImpacto.Text;
@@ -171,8 +171,8 @@ namespace Analisis_Mosler{
 
             Riesgo Riesgo2 = new Riesgo();
             Riesgo2.ID = 3;
-            Riesgo2.NombreRiesgo = "Torbellino";
-            Riesgo2.DescripcionRiesgo = "Perdida Informacion";
+            Riesgo2.Nombre = "Torbellino";
+            Riesgo2.Descripcion = "Perdida Informacion";
             Riesgo2.Mitigacion = "Lugar seguro";
             Riesgo2.Probabilidad = listProbabilidad.Text;
             Riesgo2.Impacto = listImpacto.Text;
